@@ -1,0 +1,36 @@
+{
+	"AppointmentPage": {
+		"header": "//h2[text()='Make Appointment']",
+		"ddlFacility": "#combo_facility",
+		"chkReadmission": "#chk_hospotal_readmission",
+		"rdbMedicare": "#radio_program_medicare",
+		"rdbMedicaid": "#radio_program_medicaid",
+		"rdbNone": "#radio_program_none",
+		"datVisitDate": "#txt_visit_date",
+		"datOpenCal": "#txt_visit_date~div",
+		"datMonthYear": ".datepicker-switch",
+		"btnPrev": ".prev",
+		"btnNext": ".next",
+		"txtComment": "#txt_comment",
+		"btnBookAppointment": "#btn-book-appointment",
+		"selMonth":"//span[text()='MONTH']",
+		"selDay":"//td[text()='DAY']"
+	},
+	"ConfirmationPage": {
+		"paraFacility": "#facility",
+		"paraReadmission": "#hospital_readmission",
+		"paraProgram": "#program",
+		"paraVisitDate": "#visit_date",
+		"paraComment": "#comment"
+	},
+	"LoginPage": {
+		"txtUsername": "#txt-username",
+		"txtPassword": "#txt-password",
+		"btnLogin": "#btn-login",
+		"paraErrorMessage": "p.text-danger",
+		"btnMakeAppointment": "#btn-make-appointment",
+		"btnMenu": "#menu-toggle",
+		"mnuLogout": "text=Logout",
+		"mnuLogin": "text=Login"
+	}
+}    
