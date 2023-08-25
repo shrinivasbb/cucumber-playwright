@@ -88,7 +88,7 @@ public class BrowserUtils {
 		switch (browseName) {
 		case "firefox":
 			playwright = Playwright.create();
-			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			context = browser.newContext(
 					new Browser.NewContextOptions().setAcceptDownloads(true).setViewportSize(width, height));
 			page = context.newPage();
@@ -96,7 +96,7 @@ public class BrowserUtils {
 		case "chrome":
 			playwright = Playwright.create();
 			browser = playwright.chromium()
-					.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+					.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(true));
 			context = browser.newContext(
 					new Browser.NewContextOptions().setAcceptDownloads(true).setViewportSize(width, height));
 			page = context.newPage();
@@ -104,21 +104,21 @@ public class BrowserUtils {
 		case "edge":
 			playwright = Playwright.create();
 			browser = playwright.chromium()
-					.launch(new BrowserType.LaunchOptions().setChannel("msedge").setHeadless(false));
+					.launch(new BrowserType.LaunchOptions().setChannel("msedge").setHeadless(true));
 			context = browser.newContext(
 					new Browser.NewContextOptions().setAcceptDownloads(true).setViewportSize(width, height));
 			page = context.newPage();
 			return page;
 		case "chromium":
 			playwright = Playwright.create();
-			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			context = browser.newContext(
 					new Browser.NewContextOptions().setAcceptDownloads(true).setViewportSize(width, height));
 			page = context.newPage();
 			return page;
 		case "safari":
 			playwright = Playwright.create();
-			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			context = browser.newContext(
 					new Browser.NewContextOptions().setAcceptDownloads(true).setViewportSize(width, height));
 			page = context.newPage();
@@ -144,7 +144,7 @@ public class BrowserUtils {
 		switch (browseName) {
 		case "firefox":
 			playwright = Playwright.create();
-			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			context = browser.newContext(new Browser.NewContextOptions().setAcceptDownloads(true)
 					.setViewportSize(width, height).setStorageStatePath(
 							Path.of(System.getProperty("user.dir") + File.separator + "firefoxauth.json")));
@@ -153,7 +153,7 @@ public class BrowserUtils {
 		case "chrome":
 			playwright = Playwright.create();
 			browser = playwright.chromium()
-					.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+					.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(true));
 			context = browser.newContext(new Browser.NewContextOptions().setAcceptDownloads(true)
 					.setViewportSize(width, height)
 					.setStorageStatePath(Path.of(System.getProperty("user.dir") + File.separator + "chromeauth.json")));
@@ -162,7 +162,7 @@ public class BrowserUtils {
 		case "edge":
 			playwright = Playwright.create();
 			browser = playwright.chromium()
-					.launch(new BrowserType.LaunchOptions().setChannel("msedge").setHeadless(false));
+					.launch(new BrowserType.LaunchOptions().setChannel("msedge").setHeadless(true));
 			context = browser.newContext(new Browser.NewContextOptions().setAcceptDownloads(true)
 					.setViewportSize(width, height)
 					.setStorageStatePath(Path.of(System.getProperty("user.dir") + File.separator + "edgeauth.json")));
@@ -170,7 +170,7 @@ public class BrowserUtils {
 			return page;
 		case "chromium":
 			playwright = Playwright.create();
-			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			context = browser.newContext(new Browser.NewContextOptions().setAcceptDownloads(true)
 					.setViewportSize(width, height).setStorageStatePath(
 							Path.of(System.getProperty("user.dir") + File.separator + "chromiumauth.json")));
@@ -178,7 +178,7 @@ public class BrowserUtils {
 			return page;
 		case "safari":
 			playwright = Playwright.create();
-			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			context = browser.newContext(new Browser.NewContextOptions().setAcceptDownloads(true)
 					.setViewportSize(width, height)
 					.setStorageStatePath(Path.of(System.getProperty("user.dir") + File.separator + "safariauth.json")));
